@@ -78,7 +78,7 @@ float find_mean(unsigned char * array, size_t length);
 /**
  * @brief Returns the maximum value of an array
  *
- * Given an array of data and a length, returns the maximum of an array to the screen
+ * Given an array of data and a length, returns the maximum of an array.
  *
  * @param array: array pointer of size length
  * @param length: size of the array
@@ -92,7 +92,7 @@ unsigned char find_maximum(unsigned char * array, size_t length);
 /**
  * @brief Returns the minimum value of an array
  *
- * Given an array of data and a length, returns the minimum of an array to the screen
+ * Given an array of data and a length, returns the minimum of an array.
  *
  * @param array: array pointer of size length
  * @param length: size of the array
@@ -116,5 +116,18 @@ unsigned char find_minimum(unsigned char * array, size_t length);
 
 void sort_array(unsigned char * array, size_t length);
 
+
+/**
+ * @brief Returns the median value of an array. Array will be sorted!!!
+ *
+ * Given an array of data and a length, returns the median of an array.
+ *
+ * @param array: array pointer of size length
+ * @param length: size of the array
+ *
+ * @return float: The median value
+ */
+
+float find_meadian(unsigned char * array, size_t length);
 
 #endif /* __STATS_H__ */

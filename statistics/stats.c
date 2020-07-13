@@ -85,6 +85,18 @@ void sort_array(unsigned char * array, size_t length) {
 }
 
 
+float find_median(unsigned char * array, size_t length) {
+	if (length % 2 == 0) {
+		size_t mid_point = length / 2;
+		float median_value = array[mid_point] + array[mid_point - 1];
+		return median_value / 2.0f;
+	}
+	else {
+		return array[length / 2];
+	}
+}
+
+
 /* Size of the Data Set */
 #define SIZE (40)
 
@@ -100,6 +112,7 @@ void main() {
   float mean_value;
   unsigned char max_value;
   unsigned char min_value;
+  float median_value;
   /* Statistics and Printing Functions Go Here */
 
   print_array(test, SIZE);
@@ -112,6 +125,8 @@ void main() {
   sort_array(test, SIZE);
   printf("Sorted array\n");
   print_array(test, SIZE);
+  median_value = find_median(test, SIZE);
+  printf("The median value is %.2f\n", median_value);
 
 }
 
