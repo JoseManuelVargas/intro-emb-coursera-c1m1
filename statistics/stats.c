@@ -49,6 +49,17 @@ float find_mean(unsigned char * array, size_t length) {
 }
 
 
+unsigned char find_maximum(unsigned char * array, size_t length) {
+	unsigned char max_value = array[0];
+        for (int i = 1; i < length; i++) {
+		if (array[i] > max_value) {
+	                max_value = array[i];
+		}
+        }
+        return max_value;
+}
+
+
 /* Size of the Data Set */
 #define SIZE (40)
 
@@ -62,11 +73,14 @@ void main() {
 
   /* Other Variable Declarations Go Here */
   float mean_value;
+  unsigned char max_value;
   /* Statistics and Printing Functions Go Here */
 
   print_array(test, SIZE);
   mean_value = find_mean(test, SIZE);
   printf("The mean value is %.2f\n", mean_value);
+  max_value = find_maximum(test, SIZE);
+  printf("The maximum value is %d\n", max_value);
 
 }
 
