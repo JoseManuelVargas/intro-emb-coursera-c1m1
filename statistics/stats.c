@@ -24,6 +24,23 @@
 #include <stdio.h>
 #include "stats.h"
 
+
+
+void print_array(unsigned char * array, size_t length) {
+	printf("[ ");
+	for (int i = 0; i < length; i++) {
+		if (i == length - 1) {
+			printf("%d", array[i]);
+		}
+		else {
+			printf("%d, ", array[i]);
+		}
+	}
+	printf("]\n");
+}
+
+
+
 /* Size of the Data Set */
 #define SIZE (40)
 
@@ -37,6 +54,8 @@ void main() {
 
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
+
+  print_array(test, SIZE);
 
 }
 

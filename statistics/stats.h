@@ -45,4 +45,20 @@
  */
 
 
+
+
+/**
+ * @brief Prints all the elements of an array
+ *
+ * Given an array of data and a length, prints the array to the screen
+ *
+ * @param array: array pointer of size length
+ * @param length: size of the array
+ *
+ * @return void: The output is just to the screen
+ */
+
+void print_array(unsigned char * array, size_t length);
+
+
 #endif /* __STATS_H__ */
