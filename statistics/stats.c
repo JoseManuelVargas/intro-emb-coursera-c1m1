@@ -71,6 +71,20 @@ unsigned char find_minimum(unsigned char * array, size_t length) {
 }
 
 
+void sort_array(unsigned char * array, size_t length) {
+	unsigned char aux;
+	for (int i = 0; i < length; i++) {
+		for (int j = i + 1; j < length; j++) {
+			if (array[i] < array[j]) {
+				aux = array[i];
+				array[i] = array[j];
+				array[j] = aux;
+			}
+		}
+	}
+}
+
+
 /* Size of the Data Set */
 #define SIZE (40)
 
@@ -95,6 +109,9 @@ void main() {
   printf("The maximum value is %d\n", max_value);
   min_value = find_minimum(test, SIZE);
   printf("The minimum value is %d\n", min_value);
+  sort_array(test, SIZE);
+  printf("Sorted array\n");
+  print_array(test, SIZE);
 
 }
 

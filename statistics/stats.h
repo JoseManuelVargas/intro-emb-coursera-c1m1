@@ -102,4 +102,19 @@ unsigned char find_maximum(unsigned char * array, size_t length);
 
 unsigned char find_minimum(unsigned char * array, size_t length);
 
+
+/**
+ * @brief Sorts the array in descending order
+ *
+ * Given an array of data and a length, sorts the array from largest to smallest. (The zeroth Element should be the largest value, and the last element (n-1) should be the smallest value. )
+ *
+ * @param array: array pointer of size length
+ * @param length: size of the array
+ *
+ * @return void: The sorted array is the same input array
+ */
+
+void sort_array(unsigned char * array, size_t length);
+
+
 #endif /* __STATS_H__ */
