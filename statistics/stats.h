@@ -130,4 +130,19 @@ void sort_array(unsigned char * array, size_t length);
 
 float find_meadian(unsigned char * array, size_t length);
 
+
+/**
+ * @brief Prints statistics information
+ *
+ * A function that prints the statistics of an array including minimum, maximum, mean, and median.
+ *
+ * @param array: array pointer of size length
+ * @param length: size of the array
+ *
+ * @return void: All information is printed to the screen
+ */
+
+void print_statistics(unsigned char * array, size_t length);
+
+
 #endif /* __STATS_H__ */

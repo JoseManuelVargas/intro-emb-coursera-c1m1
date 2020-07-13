@@ -97,6 +97,25 @@ float find_median(unsigned char * array, size_t length) {
 }
 
 
+void print_statistics(unsigned char * array, size_t length) {
+	float mean_value;
+      	unsigned char max_value;
+      	unsigned char min_value;
+      	float median_value;
+	
+	printf("Statistics information\n");
+      	mean_value = find_mean(array, length);
+      	printf("The mean value is %.2f\n", mean_value);
+      	max_value = find_maximum(array, length);  
+	printf("The maximum value is %d\n", max_value);
+      	min_value = find_minimum(array, length);
+      	printf("The minimum value is %d\n", min_value);
+      	sort_array(array, length);
+      	median_value = find_median(array, length);
+      	printf("The median value is %.2f\n", median_value);
+}
+
+
 /* Size of the Data Set */
 #define SIZE (40)
 
@@ -128,6 +147,8 @@ void main() {
   median_value = find_median(test, SIZE);
   printf("The median value is %.2f\n", median_value);
 
+
+  print_statistics(test, SIZE);
 }
 
 /* Add other Implementation File Code Here */
