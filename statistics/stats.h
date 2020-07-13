@@ -89,4 +89,17 @@ float find_mean(unsigned char * array, size_t length);
 unsigned char find_maximum(unsigned char * array, size_t length);
 
 
+/**
+ * @brief Returns the minimum value of an array
+ *
+ * Given an array of data and a length, returns the minimum of an array to the screen
+ *
+ * @param array: array pointer of size length
+ * @param length: size of the array
+ *
+ * @return unsigned char: The minimum value
+ */
+
+unsigned char find_minimum(unsigned char * array, size_t length);
+
 #endif /* __STATS_H__ */
